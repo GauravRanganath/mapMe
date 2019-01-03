@@ -1,0 +1,13 @@
+import webbrowser
+
+newAddress = ""
+address = input("Enter address.\n")
+
+for i in address:
+    if i == " ":
+        newAddress = newAddress + "+"
+    else:
+        newAddress = newAddress + i
+
+print(newAddress)
+webbrowser.open("http://maps.google.com/maps/place/" + str(newAddress))
